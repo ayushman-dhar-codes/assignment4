@@ -1,5 +1,5 @@
 # Object Detection GUI
-
+Author: Ayushman Dhar, 23UCS087
 A web-based interface built with Streamlit and OpenCV that detects objects in images using a pre-trained MobileNet-SSD model. I built this to demonstrate how to integrate computer vision models with a reactive frontend and analyze the resulting patterns.
 
 ## Screenshots
