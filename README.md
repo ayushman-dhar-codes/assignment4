@@ -1,30 +1,31 @@
-# Automated Object Detection & Pattern Analyzer
+# Object Detection GUI
 
-A real-time, web-based Graphical User Interface (GUI) for identifying and analyzing objects within images. This application leverages a pre-trained Deep Neural Network to perform pattern recognition and object detection, demonstrating practical applications of computer vision and machine learning.
+A web-based interface built with Streamlit and OpenCV that detects objects in images using a pre-trained MobileNet-SSD model. I built this to demonstrate how to integrate computer vision models with a reactive frontend and analyze the resulting patterns.
 
-## 🎯 Problem Statement
-Manual monitoring of visual data (such as urban traffic, security feeds, or media) is highly inefficient. There is a critical need for automated systems capable of instantly identifying, classifying, and counting multiple entities within a given frame. This project solves that problem by providing a user-friendly interface that overlays spatial bounding boxes and generates detection analytics in real-time.
+## Screenshots
 
-## ✨ Key Features
-* **Competitive GUI:** Built with Streamlit, featuring a modern, responsive split-screen layout for instant visual comparison.
-* **Machine Learning Integration:** Utilizes a Caffe-based MobileNet Single Shot Detector (SSD) for high-speed, accurate object detection.
-* **Automated Dependency Management:** The script automatically fetches and securely downloads the required, OpenCV-optimized `.prototxt` and `.caffemodel` files if they are not present in the directory.
-* **Dynamic Thresholding:** Users can adjust the AI's confidence threshold on the fly via a sidebar slider to filter out false positives.
-* **Data Analytics:** Automatically counts and categorizes identified patterns, displaying the data in a clean analytics dashboard.
+![demo1](demo1.png)
 
-## 🛠️ Technology Stack
-* **Language:** Python 3.x
-* **Frontend/GUI:** Streamlit
-* **Computer Vision:** OpenCV (`cv2`)
-* **Data Manipulation:** NumPy
-* **Image Handling:** Pillow (`PIL`)
+![demo2](demo2.png)
 
-## 📦 Installation & Setup
+![demo3](demo3.png)
 
-1. **Clone or Download the Repository**
-   Ensure all files are within the same project directory.
+## What It Does
+* **Image Upload:** Drag and drop an image (JPG/PNG) into the sidebar.
+* **Adjustable Threshold:** A slider lets you change the model's confidence threshold on the fly (e.g., set it to 0.5 to only show objects the AI is 50% sure about).
+* **Object Identification:** Draws labeled bounding boxes around recognized objects.
+* **Analytics:** Generates a text breakdown of how many objects were found and what category they belong to.
+* **Auto-Setup:** The script automatically fetches the required `.prototxt` and `.caffemodel` files if they aren't already in the folder, so it runs right out of the box.
 
-2. **Install Required Libraries**
-   Open your terminal and run the following command to install the necessary dependencies:
+## Tech Stack
+* **Python** * **Streamlit** (Frontend/GUI)
+* **OpenCV / cv2** (Image processing and Neural Network handling)
+* **NumPy** (Matrix math for bounding boxes)
+* **Pillow / PIL** (Image loading)
+
+## How to Run Locally
+
+1. Make sure you have Python installed.
+2. Open your terminal in the project folder and install the required packages:
    ```bash
    pip install streamlit opencv-python numpy pillow
