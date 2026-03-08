@@ -1,6 +1,8 @@
 Ayushman Dhar, 23UCS087
 
 # Object Detection GUI
+Author: Ayushman Dhar, 23UCS087
+
 
 A web-based interface built with Taipy and OpenCV that detects objects in images using a pre-trained MobileNet-SSD model. I built this to demonstrate how to integrate computer vision models with an event-driven frontend and analyze the resulting patterns.
 
@@ -30,4 +32,8 @@ A web-based interface built with Taipy and OpenCV that detects objects in images
 1. Make sure you have Python installed.
 2. Open your terminal in the project folder and install the required packages:
    ```bash
+<<<<<<< HEAD
    pip install taipy opencv-python numpy
+=======
+   pip install streamlit opencv-python numpy pillow
+>>>>>>> e36c244b877f3029269dd28b12bcb47779e78ff1
